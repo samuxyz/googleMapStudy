@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" ng-app="meanMapApp">
+<head>
+    <meta charset="utf-8">
+    <title>Google map MEAN app</title>
+    <meta name="description" content="Mean app testing google maps apis">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAifPrAptAl7C1g88PYQWZ4GnTdtFXfu_k"></script>
+	
+    <!-- Modernizr -->
+    <script src="./js/modernizr/bin/modernizr"></script>
+    
+	<!-- JS Source -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/angular.js"></script>
+    <script src="./js/angular-route.min.js"></script>
+    <script src="./js/angularjs-geolocation.min.js"></script>
+	
+	<!-- Angular Scripts -->
+    <script src="./app.js"></script>
+    <script src="./controllers/addController.js"></script>
+	<script src="./controllers/queryController.js"></script>
+	<script src="./services/mapService.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li active><a href="/#/join">Add User</a></li>
+            <li disabled><a href="/#/find">Find User</a></li>
+        </ul>
+        <h3 class="text-muted">Google map MEAN app</h3>
+    </div>
+   
+    <div class="row content">
+        
+        <div class="col-md-7">
+            <div id="map" style="width:645px; height:772px"></div>
+        </div>
+        <!-- Side Panel for routes -->
+        <div ng-view></div>
+		
+		<div class="col-md-7">
+            <div id="map2" style="width:645px; height:645px">
+			<img id="image" src="" />
+			</div>
+        </div>  
+                             
+    </div>
+    <hr/>
+    
+    <div class="footer">
+        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Samuele Zaza
+    </div>
+</div>
+</body>
+</html>
